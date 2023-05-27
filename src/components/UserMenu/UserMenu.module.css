@@ -1,0 +1,132 @@
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+@media screen and (min-width:320px){
+    .container{
+        max-width: 320px;
+    }
+    .cont{
+        font-size: 12px;
+        gap: 35px;
+    }
+}
+@media screen and (min-width:768px){
+    .container{
+        max-width: 768px;
+    }
+    .cont{
+        font-size: 16px;
+        gap: 0;
+    }
+}
+@media screen and (min-width:1200px){
+    .container{
+        max-width: 1200px;
+    }
+}
+.header{
+    width: 100%;
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    /* background-color: #1278DF; */
+    color: #fff;
+    padding: 15px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.linksContainer{
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+}
+.linkToHomePage{
+    color: #fff;
+}
+.linksToPages{
+    color: #fff;
+}
+.btn{
+    padding: 8px 8px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #0062cc;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0/20%), 0 2px 2px 0 rgb(0 0 0/14%), 0 1px 5px 0 rgb(0 0 0/12%);
+}
+.btn:hover{
+    background-color: #1e70c9;
+}
+
+
+.button {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button::after,
+.button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #248dff;
+  border-radius: 10px;
+}
+
+.button::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  /* background: #ffffff15; */
+  background: #0d386615;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}

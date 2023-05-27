@@ -1,0 +1,41 @@
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+@media screen and (min-width:320px){
+    .container{
+        max-width: 320px;
+    }
+}
+@media screen and (min-width:768px){
+    .container{
+        max-width: 768px;
+    }
+}
+@media screen and (min-width:1200px){
+    .container{
+        max-width: 1200px;
+    }
+}
+.header{
+    width: 100%;
+    background-color: #1278DF;
+    color: #fff;
+    padding: 15px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cont{
+    display: flex;
+    justify-content: space-around;
+}
+.linksContainer{
+    display: flex;
+    gap: 20px;
+}
+.linkToHomePage{
+    color: #fff;
+}
+.linksToPages{
+    color: #fff;
+}

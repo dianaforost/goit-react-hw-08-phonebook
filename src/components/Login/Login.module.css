@@ -1,0 +1,179 @@
+.section{
+    width: 100%;
+    /* height: 100dvh; */
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+@media screen and (min-width:320px){
+    .section{
+        height: 100dvh;
+    }
+    .container{
+        max-width: 320px;
+    }
+    .image{
+        display: none;
+        /* width: 270px;
+        height: 268px;
+        margin-bottom: 20px; */
+    }
+    .mainCont{
+        flex-direction: column;
+        padding-top: 60px;
+        gap: 20px;
+    }
+    .formContainer{
+        width: 70%;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width:768px){
+    .section{
+        height: 100dvh;
+    }
+    .container{
+        max-width: 768px;
+    }
+    .image{
+        display: none;
+        /* width: 437px;
+        height: 434px; */
+    }
+    .formContainer{
+        width: 50%;
+    }
+    .mainCont{
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+@media screen and (min-width:1200px){
+    .container{
+        max-width: 1200px;
+    }
+    .image{
+        display: block;
+        width: 504px;
+        height: 501px;
+    }
+    .mainCont{
+        padding-top: 120px;
+    }
+}
+.mainCont{
+    display: flex;
+    justify-content: space-around;
+    /* padding-top: 120px; */
+}
+.text{
+    padding: 15px 0;
+}
+.formContainer{
+    padding: 40px 45px;
+    border-top: 3px solid #090979;
+    background-color: #fff;
+    border-left: 2px solid #cfcfcf;
+    border-right: 2px solid #cfcfcf;
+}
+.formGroup {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .formField {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #000;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  
+  }
+  .formField::placeholder{
+    color: transparent;
+  }
+  .formField:placeholder-shown ~ .formLabel{
+    font-size: 1.3rem;
+      cursor: text;
+      top: 20px;
+  }
+  .formLabel {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+  }
+  
+  .formField:focus {
+    padding-bottom: 6px;  
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #090979,#00d4ff);
+    border-image-slice: 1;
+  }
+
+.formField:focus ~ .formLabel {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #090979;
+    font-weight:700;    
+  }
+  .button {
+    background-color: #fff;
+    margin-top: 50px;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.6rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button:hover {
+    background-color: #090979;
+    color: #fff;
+  }
+  
+  @media (min-width: 768px) {
+    .button {
+      font-size: 1.125rem;
+      padding: 19px 32px;
+      /* padding: 1rem 2rem; */
+    }
+  }
+  .linkToRegister{
+    padding-top: 10px;
+  }

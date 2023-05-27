@@ -1,0 +1,42 @@
+.list{
+    padding: 0px;
+    list-style: none;
+    min-height: 100px;
+}
+.item{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 6px;
+}
+.itemTitle{
+    width: 40%;
+}
+.value{
+    width: 40%;
+}
+.btn{
+    cursor: pointer;
+    background-color: #6767f6;
+    border-color: #6767f6;
+    color: #fff;
+    padding: 5px 6px;
+}
+.icon{
+    fill: #fff;
+}
+@media screen and (min-width:320px){
+.list{
+    width: 100%;
+}
+}
+@media screen and (min-width:768px){
+.list{
+    width: 90%;
+}
+}
+@media screen and (min-width:1200px){
+.list{
+    width: 90%;
+}
+}

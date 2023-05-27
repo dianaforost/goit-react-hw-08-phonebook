@@ -1,0 +1,33 @@
+.label{
+    padding-bottom: 10px;
+}
+.inputFilter{
+    /* width: 20%; */
+    padding: 8px 14px;
+    border: none;
+    border-radius: 20px;
+}
+@media screen and (min-width:320px){
+    .inputFilter{
+        width: 100%;
+    }
+}
+@media screen and (min-width:768px){
+    .inputFilter{
+        width: 60%;
+    }
+}
+@media screen and (min-width:1200px){
+    .inputFilter{
+        width: 40%;
+    }
+}
+.inputFilter:focus{
+    outline: none;
+    /* border: 1px solid blue; */
+}
+.filterContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
