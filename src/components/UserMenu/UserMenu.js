@@ -12,6 +12,7 @@ export default function UserMenu(){
     <NavLink to='/contacts' className={css.linkToHomePage}>PhoneBook</NavLink>
     <div className={css.linksContainer}>
         <p>Hello, {user.name}</p>
+        <p>{user.email}</p>
         <button onClick={(() => dispatch(logOut()))} className={css.button}>Logout</button>
         </div>
     </div>
