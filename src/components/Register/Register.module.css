@@ -1,0 +1,209 @@
+.section{
+    width: 100%;
+    height: 100dvh;
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+@media screen and (min-width:320px){
+    .container{
+        max-width: 320px;
+    }
+    .registerForm{
+        flex-direction: column-reverse;
+        padding-top: 20px;
+        gap: 20px;
+    }
+    .image{
+        display: none;
+        /* width: 270px;
+        height: 268px; */
+    }
+}
+@media screen and (min-width:768px){
+    .container{
+        max-width: 768px;
+    }
+    .image{
+        display: none;
+        /* width: 437px;
+        height: 434px; */
+    }
+    .imageContainer{
+        display: flex;
+        justify-content: center;
+    }
+    .linkToLogin{
+        text-align: center;
+    }
+}
+@media screen and (min-width:1200px){
+    .container{
+        max-width: 1200px;
+    }
+    .registerForm{
+        flex-direction: row;
+        padding-top: 120px;
+    }
+    .registerFormCont{
+        width: 50%;
+    }
+    .image{
+        display: block;
+        width: 564px;
+        height: 561px;
+    }
+    .section{
+        height: 100dvh;
+    }
+}
+.title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+.text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.registerForm{
+    /* width: 50%; */
+    display: flex;
+    justify-content: space-around;
+    /* padding-top: 120px; */
+    /* border-top: 1px solid #1278DF; */
+}
+.registerFormCont{
+    /* padding: 65px 195px; */
+    /* width: 50%; */
+    padding: 40px 45px;
+    border-top: 3px solid #090979;
+    background-color: #fff;
+    border-left: 2px solid #cfcfcf;
+    border-right: 2px solid #cfcfcf;
+    /* border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%; */
+}
+.textContainer{
+    text-align: center;
+    padding-bottom: 40px;
+}
+.username, .email, .password{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.username, .email{
+    padding-bottom: 10px;
+}
+.usernameInput, .emailInput, .passwordInput{
+    padding: 10px 10px 10px 22px;
+}
+
+
+.button {
+  background-color: #fff;
+  margin-top: 10px;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: capitalize;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  background-color: #090979;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 1.125rem;
+    padding: 19px 32px;
+    /* padding: 1rem 2rem; */
+  }
+}
+
+
+.formGroup {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .formField {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #000;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  
+  }
+  .formField::placeholder{
+    color: transparent;
+  }
+  .formField:placeholder-shown ~ .formLabel{
+    font-size: 1.3rem;
+      cursor: text;
+      top: 20px;
+  }
+  .formLabel {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+  }
+  
+  .formField:focus {
+    padding-bottom: 6px;  
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #090979,#00d4ff);
+    border-image-slice: 1;
+  }
+
+.formField:focus ~ .formLabel {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #090979;
+    font-weight:700;    
+  }
+.linkToLogin{
+    padding-top: 10px;
+}
