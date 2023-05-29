@@ -1,7 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute/PrivateRoute';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { refreshUser } from 'redux/auth/operations';
 import {RestrictedRoute} from './RestrictedRoute/RestrictedRoute'
+import { useAuth } from 'hooks/hooks';
 
 const Register = lazy(() => import('./Register/Register'))
 const SharedLayout = lazy(()=> import('./SharedLayout/SharedLayout'))
@@ -10,7 +13,13 @@ const ContactsPage = lazy(()=> import('./pages/ContactsPage'))
 const Login = lazy(() => import('./Login/Login'))
 const UserMenu = lazy(() => import('./UserMenu/UserMenu'))
 export const App = () => {
-  return (
+  const dispatch = useDispatch();
+  const {isRefreshing } = useAuth();
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+  return ( isRefreshing ? (<b>Refreshing user...</b>) : (
+
     <>
     <div>
      <Suspense fallback={<div>Loading...</div>}> 
@@ -33,6 +42,7 @@ export const App = () => {
     </div>
     {/* </Router> */}
     </>
+  )
   );
 };
 
