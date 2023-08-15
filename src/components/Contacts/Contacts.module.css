@@ -1,42 +1,60 @@
-.list{
-    padding: 0px;
-    list-style: none;
-    min-height: 100px;
+.list {
+  padding: 0px;
+  list-style: none;
+  min-height: 100px;
 }
-.item{
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding-bottom: 6px;
+.item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 6px;
 }
-.itemTitle{
-    width: 40%;
+.itemTitle {
+  width: 40%;
 }
-.value{
-    width: 40%;
+.value {
+  width: 40%;
 }
-.btn{
-    cursor: pointer;
-    background-color: #6767f6;
-    border-color: #6767f6;
-    color: #fff;
-    padding: 5px 6px;
+.btn {
+  cursor: pointer;
+  background-color: #6767f6;
+  border-color: #6767f6;
+  color: #fff;
+  padding: 5px 6px;
 }
-.icon{
-    fill: #fff;
+.icon {
+  fill: #fff;
 }
-@media screen and (min-width:320px){
-.list{
+@media screen and (min-width: 320px) {
+  .list {
     width: 100%;
+  }
 }
-}
-@media screen and (min-width:768px){
-.list{
+@media screen and (min-width: 768px) {
+  .list {
     width: 90%;
+  }
 }
-}
-@media screen and (min-width:1200px){
-.list{
+@media screen and (min-width: 1200px) {
+  .list {
     width: 90%;
+  }
 }
+.pagination {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.pageButton {
+  padding: 4px 7px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #0062cc;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0/20%), 0 2px 2px 0 rgb(0 0 0/14%),
+    0 1px 5px 0 rgb(0 0 0/12%);
+}
+.pageButton:hover {
+  background-color: #1e70c9;
 }
