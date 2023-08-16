@@ -58,3 +58,6 @@
 .pageButton:hover {
   background-color: #1e70c9;
 }
+.errorText {
+  padding-top: 15px;
+}

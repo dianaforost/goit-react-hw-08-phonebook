@@ -18,7 +18,6 @@ export const Contacts = () => {
   const handlePageChange = page => {
     setCurrentPage(page);
   };
-
   useEffect(() => {
     dispatch(fetchContacts({ page: page }));
   }, [dispatch, page]);
@@ -33,26 +32,22 @@ export const Contacts = () => {
     return null;
   };
   const filteredContacts = getFilteredContacts() || contactsArray || [];
-  if (!contactsArray) {
-    return alert('Sorry there are some problems');
-  }
   const handleClick = contactId => {
-    console.log(contactId);
     dispatch(deleteContact(contactId)).then(() => {
       dispatch(fetchContacts({ page: page }));
     });
   };
   return (
     <div>
-      {contactsArray === undefined ? (
-        <p>Sorry</p>
+      {contactsArray === undefined || contactsArray.length === 0 ? (
+        <p className={css.errorText}>There are no contacts here yet</p>
       ) : (
         <ul className={css.list}>
           {filteredContacts.length === 0 ? null : (
             <>
               {filteredContacts.map(contact => {
                 return (
-                  <li key={contact.id} className={css.item}>
+                  <li key={contact._id} className={css.item}>
                     <p className={css.itemTitle}>{contact.name}:</p>
                     <span className={css.value}>{contact.phone}</span>
                     <button
